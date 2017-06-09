@@ -1,0 +1,56 @@
+<form (ngSubmit)="$event.stopPropagation(); $event.preventDefault(); submit(data);" #form>
+  <header class="form-header">
+    <h1>Add New Member</h1>
+  </header>
+
+  <div *ngIf="formError" class="error-message">
+    {{ formError }}
+  </div>
+
+  <div class="form-item data-type data-type-info">
+    <label>
+      Basic Info:
+    </label>
+  <div class="form-item">
+    <input type="text" class="form-input" name="name" [(ngModel)]="data.name" [ngModelOptions]="{standalone:true}" required placeholder="Name of Angular Person">
+  </div>
+
+  <div class="form-item">
+    <input type="text" class="form-input" name="blurb" [(ngModel)]="data.blurb" [ngModelOptions]="{standalone:true}" required placeholder="Blurb about them">
+  </div>
+
+    <div class="form-item">
+    <textarea class="form-input" [(ngModel)]="data.aboutContent" [ngModelOptions]="{standalone:true}" required placeholder="Some Cool Content About Them">
+    </textarea>
+    </div>
+  </div>
+
+  <div class="form-item data-type data-type-photo">
+    <label>
+      Photo:
+    </label>
+  <div class="form-item">
+    <input type="file" class="form-input file" name="file" #file required placeholder="Photo">
+  </div>
+  </div>
+
+  <div class="form-item data-type data-type-extra">
+    <label>
+      Extra Info:
+    </label>
+    <div *ngFor="let item of data.information">
+      <select class="form-input" [(ngModel)]="item.type" [ngModelOptions]="{standalone:true}" required>
+        <option value="" selected></option>
+        <option [value]="record.value" *ngFor="let record of informationTypes">{{ record.text }}</option>
+      </select>
+      <input type="text" class="form-input input-value" [(ngModel)]="item.value" placeholder="Value for {{ item.type }}" [ngModelOptions]="{standalone:true}">
+      <div class="sub-actions">
+        <button (click)="addNewInformationRecord()">+ New</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="form-actions">
+    <input type="submit">
+  </nav>
+</form>

@@ -1,0 +1,33 @@
+:host {
+  display:block;
+}
+
+.main-navigation {
+  position:relative;
+  z-index:1000;
+}
+
+.main-navigation:after {
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  right:0;
+  content:"";
+  border-top:5px solid #e33030;
+}
+
+.main-navigation > .launch-modal-action {
+  position:absolute;
+  top:0;
+  right:0;
+  width:10%;
+  bottom:0;
+  background:black;
+  color:white;
+  cursor:pointer;
+  border:0;
+}
+
+.main-navigation > .launch-modal-action:hover {
+  background:#555;
+}

@@ -1,0 +1,39 @@
+:host {
+  display:table;
+  width:100%;
+}
+
+.avatar {
+  float:left;
+  width:25%;
+  background:#eee;
+  position:relative;
+  height:200px;
+  overflow:hidden;
+}
+
+.avatar img {
+  width:110%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+
+.details {
+  position:relative;
+  z-index:100;
+  overflow:auto;
+  width:75%;
+  min-height:500px;
+  background:white;
+}
+
+.area {
+  padding:20px;
+}
+
+.blurb h1 { padding:0; margin:0; }
+.area.blurb { background:#ddd; }
+.area.information { background:#eee; }
+.area.about-content { background:#fff; }

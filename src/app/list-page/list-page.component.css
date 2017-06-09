@@ -1,0 +1,46 @@
+:host {
+  display:block;
+}
+
+.list-container .list-item {
+  font-size:20px;
+  border-bottom:1px solid #aaa;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.list-item .inner {
+  display:table;
+  width:100%;
+}
+
+.list-item:hover {
+  outline:2px solid rgba(0,0,0,.2);
+}
+
+.list-item .avatar {
+  width:15%;
+  position:relative;
+  display:table-cell;
+  overflow:hidden;
+  background:#fff;
+  border-right:1px solid #aaa;
+}
+
+.list-item .avatar img {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:120%;
+  transform:translateY(-50%) translateX(-50%);
+}
+
+.list-item .content {
+  width:85%;
+  padding-left:40px;
+  display:table-cell;
+}
+
+.list-item h1 {
+  font-size:2rem;
+}

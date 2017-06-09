@@ -1,0 +1,41 @@
+:host {
+  display:block;
+  position:relative;
+}
+
+.search-box input, .active-value, .loading {
+  padding:20px 10% 20px 20px;
+  background:transparent;
+  font-size:25px;
+}
+
+.name {
+  display:inline-block;
+}
+
+.reset-button {
+  outline:0!important;
+  border:0;
+  text-indent:-9999px;
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  vertical-align:middle;
+  display:inline-block;
+  color:white;
+}
+
+.search-box {
+  padding-left:40px;
+}
+
+input {
+  background:transparent;
+  width:100%;
+  border:0;
+  outline:0!important;
+}
+
+input:focus {
+  background:white;
+}

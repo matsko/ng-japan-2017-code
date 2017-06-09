@@ -1,0 +1,31 @@
+<div class="avatar">
+  <img [src]="getPhoto()" *ngIf="hasPhoto()">
+</div>
+<div class="details">
+  <div class="area blurb">
+    <h1>{{ profile.blurb }}</h1>
+  </div>
+  <ul class="information area">
+    <li *ngFor="let item of profile?.information">
+      {{ item.type }}: {{ item.value }}
+    </li>
+  </ul>
+  <div class="area about-content">
+    <ng-container *ngIf="profile.aboutContent">
+      {{ profile.aboutContent }}
+    </ng-container>
+    <ng-container *ngIf="!profile.aboutContent">
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue gravida suscipit. Sed arcu felis, fermentum vel fermentum a, scelerisque eu metus. Nullam ornare ex nisi, at molestie eros euismod eu. Etiam pretium vitae metus non viverra. Donec varius porta tincidunt. Aenean eget lacinia ligula, eget ultrices velit. Morbi vel tortor risus. Curabitur vestibulum a nibh et sollicitudin. Nulla vel consectetur ligula. In iaculis odio quis semper cursus. Suspendisse quam nisl, egestas vitae faucibus sed, dictum sit amet enim.
+      </p>
+
+      <p>
+      Donec sit amet neque ultricies urna vestibulum consequat. Nullam tempus quis mauris nec dignissim. Etiam mattis rutrum nulla, eget pretium ipsum bibendum at. Etiam malesuada nunc id leo tristique egestas. Sed efficitur semper rhoncus. Aenean porttitor, odio eu convallis sodales, metus eros pulvinar dui, tempus dignissim elit purus vitae libero. Pellentesque condimentum, nibh sit amet varius mattis, ligula ex congue felis, ut dictum sapien dolor id dolor. Aliquam bibendum tempus lacus tincidunt placerat. Suspendisse pharetra ipsum in mattis imperdiet. Integer in ipsum eget lorem lacinia porttitor sed id sapien. Vivamus pretium quam turpis, a sollicitudin mauris dictum vel. Curabitur ornare tristique tellus. Cras rutrum nec urna ut lacinia. Curabitur rhoncus sed eros vel efficitur.
+      </p>
+
+      <p>
+      Maecenas et leo gravida, fermentum est aliquam, placerat nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse ornare auctor placerat. Curabitur ut varius elit, sit amet vestibulum sem. Proin non dapibus orci, ut venenatis leo. Mauris vestibulum nisl enim, a pretium libero sodales vel. Donec sed nisl pretium, dignissim erat ullamcorper, rutrum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </ng-container>
+  </div>
+</div>

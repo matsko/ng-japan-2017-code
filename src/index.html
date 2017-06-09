@@ -1,14 +1,34 @@
 <!doctype html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="assets/normalize.css">
   <meta charset="utf-8">
   <title>AnimationTodo</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script type="text/javascript" src="assets/web-animations.js"></script>
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  <aside id="info-panel">
+    <img src="assets/logo.png">
+    <header>
+      <h1>ng-japan 2017 Animation Demo</h1>
+    </header>
+    <p>
+      <a href="http://yom.nu/ng-japan-2017" target="_blank" rel="nofollow"><h4>Slides</h4></a>
+    </p>
+    <p>
+      <a href="https://www.yearofmoo.com/2017/06/new-wave-of-animation-features.html" target="_blank" rel="nofollow"><h4>Blog Post on Animations</h4></a>
+    </p>
+    <p>
+      <a href="https://angular.io/api" target="_blank" rel="nofollow"><h4>Angular Documentation</h4></a>
+    </p>
+    <img src="assets/squid.png" style="width:100%; display:block; margin:0 auto;" />
+  </aside>
+  <div id="application">
+    <app-root>Loading...</app-root>
+  </div>
 </body>
 </html>

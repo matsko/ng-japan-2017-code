@@ -1,0 +1,5 @@
+<div class="overlay" (click)="hide()" [@overlayAnimation]="modalState"></div>
+
+<div class="container" [@containerAnimation]="modalState">
+  <app-list-item-form (submit)="submitNewItem($event)"></app-list-item-form>
+</div>

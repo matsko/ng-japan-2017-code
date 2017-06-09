@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+  box-sizing:border-box;
+}
+
+button { outline:0!important; }
+
+body, html { padding:0; margin: 0 }
+
+html {
+  font-size:16px;
+  background:#f5f5f5;
+  color:white;
+}
+
+#info-panel {
+  position:fixed;
+  top:0;
+  right:0;
+  width:15%;
+  text-align:center;
+  bottom:0;
+  background:#222;
+}
+
+#info-panel, #info-panel a {
+  color:white!important;
+}
+
+#info-panel h4 {
+  background:#111;
+  margin:0;
+  padding:20px;
+}
+
+#info-panel h4:hover {
+  background:#333;
+}
+
+#info-panel a {
+  display:block;
+  text-decoration: none;
+}
+
+#info-panel img {
+  width:80%;
+  display:block;
+  margin:20px auto;
+}
+
+#info-panel header {
+  text-alignden:center;
+}
+
+body, input, textarea, select, option, td, tr, th, code, pre, p {
+  font-size:1rem;
+  font-family:Helvetica;
+}
+
+#application {
+  width:80%;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+#application app-root {
+  display:block;
+  margin:0 auto;
+  max-width:1000px;
+}
+
+.padding, .content {
+  padding:20px;
+}
+
+app-list-item-form, app-list-page, app-modal, app-profile-page .details, app-profile-page .avatar, app-search {
+  color:#3d4449;
+  background:white;
+}
+
+app-list-item-form, app-list-page, app-modal, app-profile-page .details, app-profile-page .avatar {
+}
+
+.router-container { position:relative; }
+
+.list-item {
+  cursor:pointer;
+}
+
+.loading-spinner {
+  border:5px solid white;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-radius:50px;
+  width:30px;
+  height:30px;
+  animation:spin 800ms infinite linear;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1 { font-size:1.5rem; margin-bottom:1rem; }
+
+ul, ol, ul li, ol li { padding:0; margin:0; list-style:none; }
+
+.reset-button {
+  background: url(assets/icons/arrow-left.png) no-repeat center center;
+}
+
+.search-box {
+  background:url(assets/icons/search.png) no-repeat 20px center;
+}

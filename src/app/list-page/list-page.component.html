@@ -1,0 +1,13 @@
+<div class="list-container" [@listAnimation]="items.length">
+  <div *ngFor="let item of items" (click)="visitItem(item)" class="list-item">
+    <div class="inner">
+      <div class="avatar">
+        <img [src]="getPhoto(item)" *ngIf="hasPhoto(item)">
+      </div>
+      <div class="details content">
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.blurb }}</p>
+      </div>
+    </div>
+  </div>
+</div>

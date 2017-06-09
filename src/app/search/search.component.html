@@ -1,0 +1,13 @@
+<form class="search-bar" [@searchBarAnimation]="state">
+  <div [@showHideAnimation]="state == 'loading' ? 'on' : 'off'" class="loading">
+    <div class="loading-spinner"></div>
+  </div>
+  <div [@showHideAnimation]="state == 'active' ? 'on' : 'off'" class="active-value">
+    <button (click)="reset()" class="reset-button">Back</button>
+    <div class="name">{{ activeValue }}</div>
+  </div>
+  <div [@showHideAnimation]="state == 'search' ? 'on' : 'off'" class="search-box">
+     <input type="text" [(ngModel)]="searchTerm" (input)="processInput(searchTerm)" [ngModelOptions]="{'standalone':true}" placeholder="Search for something...">
+  </div>
+</form>
+
